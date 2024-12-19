@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Kanit', sans-serif;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+  }
+  /* ul {
+    list-style-type: none;
+    padding: 0.5%;
+  } */
+  
+  a {
+    text-decoration: none;
+    color: #8f16e6;
+    transition: color 0.3s;
+  }
+  a:hover {
+    color: #03adf6;
+    /* font-weight: 500; */
+    /* font-style: italic; */
+    /* text-decoration: underline; */
+  }
+  h1 {
+    color: #8d06e8;
+    font-weight: 600;
+    text-align: center;
+  }
+  h2 {
+    font-weight: 500;
+    color: #9412f0;
+  }
+  h3 {
+    font-weight: 500;
+    font-style: italic;
+    color: #8f16e6;
+  }
+  pre {
+    font-family: 'Kanit', sans-serif;
+    background-color: #dedede;
+    border-left: #9412f0 5px solid;
+    padding: 10px;
+    text-wrap: inherit;
+  }
+  #btn a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #8c15db;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  #btn a:hover {
+    background-color: #5502a3;
+    text-decoration: none;
+    font-style: normal;
+  }
+  .footer{
+    margin-top: 50px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  .container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #03adf6;
+    transition: transform 0.25s ease-out;
+  }
+  
+  /* -------------- Hover Animations -------------- */
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+  }
+  .hover-underline-animation.center::after {
+    transform-origin: bottom center;
+  }
+  .hover-underline-animation.center:hover::after {
+    transform-origin: bottom center;
+  }
+  .hover-underline-animation.left::after {
+    transform-origin: bottom right;
+  }
+  .hover-underline-animation.left:hover::after {
+    transform-origin: bottom left;
+  }

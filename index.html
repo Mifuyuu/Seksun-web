@@ -4,11 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Tutorial</title>
-  <!-- <link rel="stylesheet" href="assets/styles.css"/> -->
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css"/>
   <link rel="icon" type="image/x-icon" href="/assets/icon.png">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
   <style>
-    html {
+    ul {
+      list-style-type: none;
+      padding: 0.5%;
+    }
+    /* html {
       scroll-behavior: smooth;
     }
     body {
@@ -16,12 +20,8 @@
       color: #333;
       line-height: 1.5;
       margin: 0;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0.5%;
-    }
-    a {
+    } */
+    /* a {
       text-decoration: none;
       color: #8f16e6;
       transition: color 0.3s;
@@ -40,7 +40,6 @@
     h2 {
       font-weight: 500;
     }
-
     pre {
       font-family: 'Kanit', sans-serif;
       background-color: #dedede;
@@ -64,7 +63,7 @@
       text-decoration: none;
       font-style: normal;
     }
-    footer{
+    .footer{
       margin-top: 50px;
       background-color: #333;
       color: #fff;
@@ -75,11 +74,10 @@
       max-width: 1400px;
       margin: auto;
       padding: 20px;
-    }
+    } */
   </style>
 </head>
 <body>
-
   <div id="btn">
     <a href="#top">Back to Top</a>
   </div>
@@ -88,18 +86,18 @@
     <p>Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
     <h2>Topics</h2>
     <ul>
-      <li><a href="#Introduction">Introduction to HTML</a></li>
-      <li><a href="#Structure">HTML Document Structure</a></li>
-      <li><a href="#Heading">Heading</a></li>
-      <li><a href="#Paragraph">Paragraph</a></li>
-      <li><a href="#Text_Formatting">Text Formatting</a></li>
-      <li><a href="#Links">Creating Links</a></li>
-      <li><a href="#Lists">Lists (Ordered and Unordered)</a></li>
-      <li><a href="#Images">Adding Images</a></li>
-      <li><a href="#Tables">Creating Tables</a></li>
-      <li><a href="#Forms">HTML Forms</a></li>
-      <li><a href="#Multimedia">Embedding Multimedia (Audio & Video)</a></li>
-      <li><a href="#Semantic">Semantic HTML</a></li>
+      <li><a class="hover-underline-animation left" href="#Introduction">Introduction to HTML</a></li>
+      <li><a class="hover-underline-animation left" href="#Structure">HTML Document Structure</a></li>
+      <li><a class="hover-underline-animation left" href="#Heading">Heading</a></li>
+      <li><a class="hover-underline-animation left" href="#Paragraph">Paragraph</a></li>
+      <li><a class="hover-underline-animation left" href="#Text_Formatting">Text Formatting</a></li>
+      <li><a class="hover-underline-animation left" href="#Links">Creating Links</a></li>
+      <li><a class="hover-underline-animation left" href="#Lists">Lists (Ordered and Unordered)</a></li>
+      <li><a class="hover-underline-animation left" href="#Images">Adding Images</a></li>
+      <li><a class="hover-underline-animation left" href="#Tables">Creating Tables</a></li>
+      <li><a class="hover-underline-animation left" href="#Forms">HTML Forms</a></li>
+      <li><a class="hover-underline-animation left" href="#Multimedia">Embedding Multimedia (Audio & Video)</a></li>
+      <li><a class="hover-underline-animation left" href="#Semantic">Semantic HTML</a></li>
     </ul>
     <hr>
     <h2 id="Introduction">Introduction to HTML</h2>
@@ -114,7 +112,7 @@
       - Browsers do not display the HTML tags, but use them to render the content of the page
       - HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages
       - HTML is not a programming language, but a markup language</pre>
-    <a href="index.html">Top</a>
+    <a class="hover-underline-animation left" href="index.html">Top</a>
     <hr>
     <h2 id="Structure">HTML Document Structure</h2>
     <p>An HTML document has the following basic structure...</p>
@@ -133,10 +131,10 @@
     
       ตัวอย่าง: &lt;h1&gt;Hello, World!&lt;/h1&gt;
               &lt;img src="image.jpg" alt="A description of the image"&gt;</pre>
-    <a href="index.html">Top</a>
+    <a class="hover-underline-animation left" href="index.html">Top</a>
     <hr>
     <h2 id="Heading">Heading</h2>
-    <p>workshop</p>
+    <p><a href="02_heading.html">Workshop</a></p>
     <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...</p>
     <pre>
       - &lt;h1&gt;: Heading 1
@@ -145,7 +143,7 @@
       - &lt;h4&gt;: Heading 4
       - &lt;h5&gt;: Heading 5
       - &lt;h6&gt;: Heading 6</pre>
-    <a href="index.html">Top</a>
+    <a class="hover-underline-animation left" href="index.html">Top</a>
     <hr>
     <h2 id="Paragraph">Paragraph</h2>
     <p>workshop</p>
@@ -153,7 +151,7 @@
     <pre>
       - &lt;p&gt;: Paragraph
     </pre>
-    <a href="index.html">Top</a>
+    <a class="hover-underline-animation left" href="index.html">Top</a>
     <hr>
     <h2 id="Text_Formatting">Text Formatting</h2>
     <p>workshop</p>
@@ -180,7 +178,7 @@
       - &lt;blockquote&gt;: Block quotation
       - &lt;q&gt;: Inline quotation
       - &lt;code&gt;: Code snippet</pre>
-    <a href="index.html">Top</a>
+    <a class="hover-underline-animation left" href="index.html">Top</a>
     <hr>
     <h2 id="Links">Creating Links</h2>
     <p>workshop</p>
@@ -206,7 +204,7 @@
       - Download links:
           - Use the download attribute to create a download link
           - Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;</pre>
-    <a href="index.html">Top</a>
+    <a class="hover-underline-animation left" href="index.html">Top</a>
     <hr>
     <h2 id="Lists">Lists (Ordered and Unordered)</h2>
     <p>workshop</p>
@@ -252,7 +250,7 @@
           - Example: &lt;ol style="list-style-type: lower-alpha;"&gt;
           - Example: &lt;ol style="list-style-type: upper-roman;"&gt;
           - Example: &lt;ol style="list-style-type: lower-roman;"&gt;</pre>
-    <a href="index.html">Top</a>
+    <a class="hover-underline-animation left" href="index.html">Top</a>
     <hr>
     <h2 id="Images">Adding Images</h2>
     <p>workshop</p>
@@ -299,7 +297,7 @@
                   height: 150px;
                   object-fit: cover;
               }</pre>
-    <a href="index.html">Top</a>
+    <a class="hover-underline-animation left" href="index.html">Top</a>
     <hr>
     <h2 id="Tables">Creating Tables</h2>
     <p>HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...</p>
@@ -309,7 +307,7 @@
       - &lt;th&gt;: Table header
       - &lt;td&gt;: Table data/cell
     </pre>
-    <a href="index.html">Top</a>
+    <a class="hover-underline-animation left" href="index.html">Top</a>
     <hr>
     <h2 id="Forms">HTML Forms</h2>
     <p>HTML forms are defined with the &lt;form&gt; tag...</p>
@@ -320,14 +318,14 @@
       - &lt;button&gt;: Button
       - &lt;select&gt;: Dropdown list
       - &lt;option&gt;: Option in a dropdown list</pre>
-    <a href="index.html">Top</a>
+    <a class="hover-underline-animation left" href="index.html">Top</a>
     <hr>
     <h2 id="Multimedia">Embedding Multimedia (Audio & Video)</h2>
     <p>HTML multimedia elements include &lt;audio&gt; and &lt;video&gt;...</p>
     <pre>
       - &lt;audio&gt;: Audio player
       - &lt;video&gt;: Video player</pre>
-    <a href="index.html">Top</a>
+    <a class="hover-underline-animation left" href="index.html">Top</a>
     <hr>
     <h2 id="Semantic">Semantic HTML</h2>
     <p>Semantic HTML elements clearly define the content of a web page...</p>
@@ -338,16 +336,13 @@
       - &lt;article&gt;: Defines an article
       - &lt;aside&gt;: Defines content aside from the page content
       - &lt;footer&gt;: Defines a footer for a document or section</pre>
-    <a href="index.html">Top</a>
+    <a class="hover-underline-animation left" href="index.html">Top</a>
     <hr>
-    <a href="https://www.w3schools.com/">Learn more about HTML</a>
+    <a class="hover-underline-animation left" href="https://www.w3schools.com/">Learn more about HTML</a>
   </div>
-  
-
-  <footer class=".footers">
+  <footer class="footer">
     <!-- <hr> -->
     <p >&copy; 2024 HTML Tutorial by Seksun (Aka _Tsuzaki)</p>
   </footer>
-
 </body>
 </html>
