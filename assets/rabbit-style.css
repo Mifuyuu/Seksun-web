@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    /* line-height: 1.5; */
+    color: #333;
+    margin: auto;
+}
+
+header {
+    /* background-color: #ed8b8b; */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.container {
+    margin: 0 auto;
+    background-color: #8b40ee;
+    /* height: 70vh; */
+}
+
+footer {
+    background-color: #4f09aa;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    /* background-color: #eec840; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-left {
+    /* background-color: #f8d2b5; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-name {
+    /* background-color: #4f09aa; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+}
+.menu {
+    /* background-color: #8b40ee; */
+}
+
+.menu ul {
+    /* background-color: #ad81e8; */
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    gap: 10px;
+    padding: 0 0 0 24px;
+}
+/* .btn { */
+    /* background-color: aqua; */
+    /* align-self: center; */
+/* } */
+
+.btn-primary {
+    background-color: #741ee5;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #fcfcfc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid #741ee5;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #741ee5;;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #741ee5;
+}
+.btn-secondary:hover {
+    background-color: #5f0fc7;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}

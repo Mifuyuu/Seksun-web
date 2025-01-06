@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/icon.png" />
+    <title>Image</title>
+    <style>
+      body {
+        font-family: "Kanit", Arial, Helvetica, sans-serif;
+        margin: auto;
+        background-image: url('images/background.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #ffffffc2;
+        padding: 2.5%;
+        padding-top: 1%;
+        border-left: solid 5px #9a26e7;
+        border-radius: 0 10px 10px 0;
+      }
+      h1 {
+        color: #8f16e6;
+        font-weight: 500;
+      }
+      img {
+        border-radius: 4px;
+        padding: 5px;
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      .b-image-contain {
+        object-fit: contain;
+        width: 300px;
+        height: 100px;
+        border: 1px solid #833cd4;
+      }
+      .b-image-fill {
+        object-fit: fill;
+        width: 300px;
+        height: 100px;
+        border: 1px solid #833cd4;
+      }
+      .b-image-cover {
+        object-fit: cover;
+        width: 300px;
+        height: 100px;
+        border: 1px solid #833cd4;
+      }
+      .s-image-fill {
+        object-fit: fill;
+        width: 300px;
+        height: 200px;
+        border: 1px solid #833cd4;
+      }
+      .s-image-contain {
+        object-fit: contain;
+        width: 300px;
+        height: 200px;
+        border: 1px solid #833cd4;
+      }
+      .s-image-cover {
+        object-fit: cover;
+        width: 300px;
+        height: 200px;
+        border: 1px solid #833cd4;
+      }
+      .gallery-space-around {
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+      }
+      .gallery-space-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+      }
+      .gallery-space-evenly {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .ex-flex {
+        display: flex;
+        justify-content: center;
+      }
+      .back-to-home {
+        text-align: center;
+        margin-top: 20px;
+      }
+      a {
+        color: #8f1ae2;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      a:hover {
+        color: #5abafe;
+        text-decoration: underline;
+      }
+      .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Favorite Photo</h1>
+      <img
+        src="https://cdn.discordapp.com/attachments/859636131510616077/1324285953765933106/472236408_1268007417619474_3512204984012186642_n.jpg?ex=677c3627&is=677ae4a7&hm=cd98927ba8da00fc57c27eb58ec89e2dbc8e1c23966053fb56e085b0daa0b757&"
+        alt="Cat"
+        width="300"
+      />
+      <p>This image is Castorice.</p>
+      <img src="images/rabbit3.jpg" alt="rabbit" width="300" />
+      <p>This is an image of my favorite animal.</p>
+      <hr />
+      <h1>Click the Image : Link for Open new window</h1>
+      <a href="https://github.com/Mifuyuu/Seksun-web" target="_blank">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+          alt="A clickable image" width="150" height="150"
+        />
+      </a>
+      <hr />
+      <h1>Image Alignment</h1>
+      <p>
+        <img
+          src="https://cdn.discordapp.com/attachments/859636131510616077/1325653971095781468/768529.1.png?ex=677c92f8&is=677b4178&hm=8d0f1a25cf96c5d2d8f29b4ea2736621b56aa4921411848da8432289a99506d3&"
+          alt="Left aligned image"
+          class="left"
+          width="150"
+          height="150"
+        /><p class="left">This image is aligned to the left.</p>
+      </p>
+      <p>
+        <img
+          src="https://cdn.discordapp.com/attachments/859636131510616077/1325653971095781468/768529.1.png?ex=677c92f8&is=677b4178&hm=8d0f1a25cf96c5d2d8f29b4ea2736621b56aa4921411848da8432289a99506d3&"
+          alt="Right aligned image"
+          class="right"
+          width="150"
+          height="150"
+        /><p class="right">This image is aligned to the right.</p>
+      </p>
+      <p>
+        <img
+          src="https://cdn.discordapp.com/attachments/859636131510616077/1325653971095781468/768529.1.png?ex=677c92f8&is=677b4178&hm=8d0f1a25cf96c5d2d8f29b4ea2736621b56aa4921411848da8432289a99506d3&"
+          alt="Center aligned image"
+          class="center"
+          width="150"
+          height="150"
+        /><p class="center">This image is centered.</p>
+      </p>
+      <hr />
+      <h1>Object-Fit: Image Bigger than Container (300x100)</h1>
+      <div>
+        <img
+          src="images/rabbit3.jpg"
+          alt="Sample Image"
+          class="b-image-contain"
+        />
+        <p>
+          contain: ปรับขนาดเนื้อหาให้พอดีกับกล่องเนื้อหา โดยรักษาอัตราส่วนภาพ
+          อาจมีพื้นที่ว่างถ้าอัตราส่วนไม่ตรงกัน
+        </p>
+        <br />
+      </div>
+      <div>
+        <img
+          src="images/rabbit3.jpg"
+          alt="Sample Image"
+          class="b-image-fill"
+        />
+        <p>
+          fill (ค่าเริ่มต้น): ปรับขนาดเนื้อหาให้พอดีกับกล่องเนื้อหา
+          อาจทำให้เนื้อหาถูกยืดหรือบีบ
+        </p>
+        <br />
+      </div>
+      <div>
+        <img
+          src="images/rabbit3.jpg"
+          alt="Sample Image"
+          class="b-image-cover"
+        />
+        <p>
+          cover: ปรับขนาดเนื้อหาให้เติมเต็มกล่องเนื้อหา โดยรักษาอัตราส่วนภาพ
+          ส่วนที่เกินจะถูกตัดออก
+        </p>
+        <br />
+      </div>
+      <hr />
+      <h1>Object-Fit: Image Smaller than Container</h1>
+      <div>
+        <img
+          src="https://cdn.discordapp.com/attachments/859636131510616077/1325662397918089259/icons8-coin-100.png?ex=677c9ad1&is=677b4951&hm=a361b2bf8c7cc39bc6d85dc390cfbceac829452fe0af45769aa088d82a82cb24&"
+          alt="Sample Image"
+          class="s-image-fill"
+        />
+        <p>
+          fill (ค่าเริ่มต้น): ปรับขนาดเนื้อหาให้พอดีกับกล่องเนื้อหา
+          อาจทำให้เนื้อหาถูกยืดหรือบีบ
+        </p>
+      </div>
+      <div>
+        <img
+          src="https://cdn.discordapp.com/attachments/859636131510616077/1325662397918089259/icons8-coin-100.png?ex=677c9ad1&is=677b4951&hm=a361b2bf8c7cc39bc6d85dc390cfbceac829452fe0af45769aa088d82a82cb24&"
+          alt="Sample Image"
+          class="s-image-contain"
+        />
+        <p>
+          contain: ปรับขนาดเนื้อหาให้พอดีกับกล่องเนื้อหา โดยรักษาอัตราส่วนภาพ
+          อาจมีพื้นที่ว่างถ้าอัตราส่วนไม่ตรงกัน
+        </p>
+      </div>
+      <div>
+        <img
+          src="https://cdn.discordapp.com/attachments/859636131510616077/1325662397918089259/icons8-coin-100.png?ex=677c9ad1&is=677b4951&hm=a361b2bf8c7cc39bc6d85dc390cfbceac829452fe0af45769aa088d82a82cb24&"
+          alt="Sample Image"
+          class="s-image-cover"
+        />
+        <p>
+          cover: ปรับขนาดเนื้อหาให้เติมเต็มกล่องเนื้อหา โดยรักษาอัตราส่วนภาพ
+          ส่วนที่เกินจะถูกตัดออก
+        </p>
+      </div>
+      <hr />
+      <h1>Image Gallery</h1>
+      <p>this is a FlexBox with justify-content: space-around;</p>
+      <div class="gallery-space-around">
+        <img src="https://via.placeholder.com/150" alt="Image 1" />
+        <img src="https://via.placeholder.com/150" alt="Image 2" width="100" height="100"/>
+        <img src="https://via.placeholder.com/150" alt="Image 3" />
+        <img src="https://via.placeholder.com/150" alt="Image 4" width="100" height="100"/>
+      </div>
+      <hr />
+      <p>this is a FlexBox with justify-content: space-around;</p>
+      <div class="gallery-space-between">
+        <img src="https://via.placeholder.com/150" alt="Image 1" />
+        <img src="https://via.placeholder.com/150" alt="Image 2" width="100" height="100"/>
+        <img src="https://via.placeholder.com/150" alt="Image 3" />
+        <img src="https://via.placeholder.com/150" alt="Image 4" width="100" height="100"/>
+      </div>
+      <hr>
+      <p>this is a FlexBox with justify-content: space-evenly;</p>
+      <div class="gallery-space-evenly">
+        <img src="https://via.placeholder.com/150" alt="Image 1" />
+        <img src="https://via.placeholder.com/150" alt="Image 2" width="100" height="100"/>
+        <img src="https://via.placeholder.com/150" alt="Image 3" />
+        <img src="https://via.placeholder.com/150" alt="Image 4" width="100" height="100"/>
+      </div>
+      <hr />
+      <h1>FlexBox:</h1>
+      <div class="ex-flex">
+        <img src="images/flex.jpg" alt="Image 1" />
+        <br />
+      </div>
+      <hr />
+      <h1>FlexBox: justify-content</h1>
+      <div class="ex-flex">
+        <img src="images/justify-content.jpg" alt="Image 1" />
+        <br />
+      </div>
+      <hr />
+      <a href="index.html">Back to Home</a>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2024 HTML Tutorial by Seksun (Aka _Tsuzaki)</p>
+    </footer>
+  </body>
+</html>
