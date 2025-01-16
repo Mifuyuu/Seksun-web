@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Table Layout Sites</title>
+    <style>
+      body {
+        font-family: "Kanit", Arial, sans-serif;
+        margin: 0;
+        background-color: #794fbb;
+      }
+      table,
+      tr,
+      th,
+      td {
+        /* border: 1px solid black; */
+        border-spacing: 0px;
+        /* border-collapse: collapse; */
+        text-align: center;
+        margin: 0 auto;
+        padding: 0px;
+      }
+      table.container {
+        border-spacing: 0px;
+        width: 100%;
+      }
+      td.container {
+        padding: 10px;
+      }
+      td {
+        box-sizing: border-box;
+      }
+      td.menu {
+        width: 10%;
+        vertical-align: top;
+        background-color: #673ea8;
+      }
+      table.container {
+        width: 70%;
+        border-spacing: 20px;
+      }
+      td.container {
+        object-fit: fill;
+        border-radius: 20px;
+        /* border: #1f1f1f 2px solid; */
+        background-color: #ffffff44;
+      }
+      td.container:hover {
+        object-fit: fill;
+        border-radius: 20px;
+        transition: box-shadow 0.5s;
+        box-shadow: 0px 0px 5px 5px #5d0bbbe3;
+      }
+      td.footer {
+        text-align: center;
+        background-color: #1f1f1f;
+        color: #f2f2f2;
+        padding: 16px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 10%;
+        margin: 0;
+        text-align: left;
+        line-height: 1.5;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .imgcontent:hover {
+        transition: transform .2s;
+        transform: scale(1.1);
+      }
+
+      a {
+        color: #fdfdfd;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #272727;
+        text-decoration: underline;
+      }
+      td.containerin {
+        width: 50%;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2">
+          <img
+            src="images/Banners.png"
+            alt="Header Image"
+            style="display: block"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="menu" rowspan="2">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Story</a></li>
+            <li><a href="">Info</a></li>
+            <li><a href="">Ranking</a></li>
+            <li><a href="index.html">Back to Home</a></li>
+          </ul>
+        </td>
+        <td>
+          <table class="container">
+            <tr>
+              <td class="container">
+                <img class="imgcontent" src="images/Diamond.png" alt="diamond" />
+                <p><b>Diamond :</b><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quia neque voluptas autem, beatae labore officiis tempora natus modi harum dolorem libero illum ex illo ipsum corporis quaerat! Quo, expedita!</p>
+              </td>
+              <td class="container">
+                <img class="imgcontent" src="images/iron.png" alt="iron" />
+                <p><b>Iron :</b><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quia neque voluptas autem, beatae labore officiis tempora natus modi harum dolorem libero illum ex illo ipsum corporis quaerat! Quo, expedita!</p>
+              </td>
+              <td class="container">
+                <img class="imgcontent" src="images/gold.png" alt="gold" />
+                <p><b>Gold :</b><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quia neque voluptas autem, beatae labore officiis tempora natus modi harum dolorem libero illum ex illo ipsum corporis quaerat! Quo, expedita!</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="container">
+                <img class="imgcontent" src="images/emerald.png" alt="emerald" />
+                <p><b>Emerald :</b><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quia neque voluptas autem, beatae labore officiis tempora natus modi harum dolorem libero illum ex illo ipsum corporis quaerat! Quo, expedita!</p>
+              </td>
+              <td class="container">
+                <img class="imgcontent" src="images/redstone.png" alt="redstone" />
+                <p><b>Redstone :</b><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quia neque voluptas autem, beatae labore officiis tempora natus modi harum dolorem libero illum ex illo ipsum corporis quaerat! Quo, expedita!</p>
+              </td>
+              <td class="container">
+                <img class="imgcontent" src="images/mithril.png" alt="mithril" />
+                <p><b>Titanium :</b><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quia neque voluptas autem, beatae labore officiis tempora natus modi harum dolorem libero illum ex illo ipsum corporis quaerat! Quo, expedita!</p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos beatae, reprehenderit iure delectus consequatur voluptatem alias quaerat! In, et? Aperiam illo consectetur molestiae vitae adipisci, optio delectus maxime. Laudantium, omnis?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="footer"><p>&copy; Copyright reserved.<br>นายเสกสรรญ หลำวรรณะ 664230033 66/45
+          <br> สาขาเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์ มหาวิทยาลัยราชภัฏนครปฐม</p></td>
+      </tr>
+    </table>
+  </body>
+</html>
