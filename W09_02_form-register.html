@@ -14,12 +14,12 @@
             --accent-color: #7857fd;
             --white-color: #fff;
             --black-color: #2a2a2a;
-            --transition: all 0.4s ease;
+            --transition: all 0.3s ease;
         }
 
         * {
             font-family: "Kanit", Arial, sans-serif;
-            /* box-sizing: border-box; */
+            box-sizing: border-box;
             padding: 0;
             margin: 0;
         }
@@ -29,9 +29,11 @@
             padding: 20px;
             background-color: var(--black-color);
         }
+
         h1 {
             text-align: center;
             /* display: inline-block; */
+            font-weight: 600;
         }
 
         form {
@@ -40,6 +42,9 @@
             gap: 7px;
         }
 
+        select {
+            text-align: center;
+        }
         fieldset {
             border: none;
         }
@@ -62,7 +67,16 @@
             box-shadow: var(--primary-color) 2px 2px 20px;
         }
 
-        button {
+        .btnmenu {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        a, button{
+            width: 100%;
+            max-width: 100%;
+            display: block;
             background-color: var(--secondary-color);
             color: var(--black-color);
             padding: 10px 20px;
@@ -73,11 +87,14 @@
             font-size: large;
             font-weight: 500;
             transition: var(--transition);
+            text-decoration: none;
+            text-align: center;
         }
-        button:hover {
+        a:hover, button:hover {
             background-color: var(--primary-color);
             color: var(--white-color);
         }
+
     </style>
 </head>
 <body>
@@ -108,7 +125,11 @@
                     <option value="jp">Japan</option>
                     <option value="other">Other</option>
                 </select>
-                <button type="submit">Submit</button>
+                <div class="btnmenu">
+                    <button type="submit">Submit</button>
+                    <button onclick="location.href='index.html';">Back to Home</button>
+                    <!-- <a href="index.html">Back to Home</a> -->
+                </div>
             </form>
         </fieldset>
     </div>
