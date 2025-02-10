@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid TEST - 664230033</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"/>
+    <style>
+        :root {
+            --primary-color: #8233f0;
+            --secondary-color: #ffb34f;
+            --accent-color: #7857fd;
+            --white-color: #fff;
+            --black-color: #2a2a2a;
+            --gray-color: #777;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            font-family: "Kanit", Arial, sans-serif;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #2a2a2a;
+            height: 200px;
+            justify-content: space-around;
+        }
+
+        .info {
+            padding-top: 16px;
+            margin: auto;
+            align-items: center;
+            max-width: 800px;
+            margin-bottom: 24px;
+        }
+
+        .box1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--secondary-color);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .footer {
+            display: flex;
+            background-color: #2a2a2a;
+            height: 100px;
+            color: var(--white-color);
+            align-items: center;
+            justify-content: space-around;
+            line-height: 2;
+        }
+
+        h1 {
+            font-weight: 600;
+            color: var(--secondary-color);
+            text-align: center;
+        }
+
+        h3 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 24px
+        }
+        table,th,tr,td {    
+            border: 2px solid var(--black-color);
+            border-spacing: 1px;
+        }
+        th {
+            background-color: var(--secondary-color);
+        }
+        th,tr,td {
+            padding: 2px;
+        }
+        .center {
+            text-align: center;
+        }
+
+        hr {
+            padding: 0px;
+            margin-top: 16px;
+            height: 3px;
+            background-color: var(--black-color);
+            box-shadow: none;
+            border: none;
+        }
+
+        ul {
+            padding: 20px;
+            padding-left: 40px;
+        }
+        a {
+            color: var(--primary-color);
+        }
+        a:hover {
+            text-decoration: underline;
+            color: var(--white-color);
+        }
+        .btn {
+            display: flex;
+            justify-content: right;
+        }
+        button{
+            width: 100%;
+            max-width: 200px;
+            display: block;
+            background-color: var(--secondary-color);
+            color: var(--black-color);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: large;
+            font-weight: 500;
+            transition: var(--transition);
+            text-decoration: none;
+            text-align: center;
+            justify-content: right;
+            box-shadow: var(--primary-color) 4px 4px 10px;
+        }
+        button:hover {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>รายงานผลเกรด...<span style="color: var(--accent-color);">Mr. Seksun Hlamwanna</span></h1>
+        </div>
+        <hr>
+        <div class="info">
+            <div class="box1">
+                <p>664230033 นายเสกสรรญ หลำวรรณะ<br>หมู่เรียน: 66/45 | อาจารย์ที่ปรึกษา: อาจารย์แก้วใจ<br>สาขา: Link => <a href="https://pgm.npru.ac.th/it/">เทคโนโลยีสารสนเทศ</a> | คณะ: วิทยาศาสตร์และเทคโนโลยี</p>
+                <img src="images/Npru-logo.png" alt="npru logo" width="150px">
+            </div>
+            <h3>ผลการเรียน</h3>
+            <table>
+                <tr>
+                    <th>รหัสวิชา</th>
+                    <th>ชื่อวิชา</th>
+                    <th>เกรด</th>
+                </tr>
+                <tr>
+                    <td class="center">7201103</td>
+                    <td>หลักการเขียนโปรแกรมคอมพิวเตอร์</td>
+                    <td class="center">A</td>
+                </tr>
+                <tr>
+                    <td class="center">7201401</td>
+                    <td>โปรแกรมสำเร็จรูปมัลติมีเดีย</td>
+                    <td class="center">A</td>
+                </tr>
+                <tr>
+                    <td class="center" colspan="3">GPA: 4.00</td>
+                </tr>
+            </table>
+            <h2>หมายเหตุ</h2>
+            <ul style="list-style-type: circle">
+                <li>เกรดเฉลี่ยที่แสดงจะทำการคำนวณเกรดรายวิชา</li>
+                <li>Transcript จะถือค่าที่ได้คำนวณเก็บไว้ ณ วันสิ้นภาค</li>
+            </ul>
+            <div class="btn">
+                <button onclick="location.href='index.html';">Back to Home</button>
+            </div>
+        </div>
+        <div class="footer center">
+            &copyCopyright reserved by Seksun Hlamwanna. IT 664230033.<br>Nakhon Pathom Rajabhat University
+        </div>
+    </div>
+
+    
+</body>
+</html>
