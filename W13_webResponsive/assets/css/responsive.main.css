@@ -27,7 +27,6 @@ header {
     padding: 16px 0;
     position: fixed;
     top: 0;
-    /* z-index: 100; */
     width: 100%;
 }
 
@@ -56,16 +55,18 @@ h1 {
     }
 }
 
-nav, ul {
+nav {
+    ul {
     font-size: 18px;
     font-weight: 500;
     margin-left: 16px;
     display: flex;
     list-style-type: none;
     gap: 24px;
-    a {
-        text-decoration: none;
-        color: var(--primary-color);
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
     }
 }
 
@@ -78,6 +79,37 @@ nav, ul {
 
 .hero {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left-side {
+        width: 50%;
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 16px 0;
+        }
+        p {
+            font-size: 1.2rem;
+            color: var(--tertiary-color);
+            margin: 16px 0;
+        }
+    }
+    .right-side {
+        width: 50%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+/*------ Customize Section ------*/
+
+.reverse-box {
+    display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     .left-side {
@@ -122,7 +154,7 @@ nav, ul {
 
 .solution-header {
     text-align: center;
-    /* margin-bottom: 24px; */
+    margin: 72px;
     h2 {
         font-weight: 600;
         font-size: 2rem;
@@ -141,8 +173,7 @@ nav, ul {
     padding: 24px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    /* gap: 12px; */
+    /* justify-content: space-between; */
     box-shadow: var(--box-shadow);
     border-radius: 10px;
     h3 {
@@ -167,6 +198,30 @@ nav, ul {
     /* align-content: center; */
     margin: auto;
 
+}
+
+/* ------ Footer ------ */
+
+footer {
+    background-color: var(--primary-dark-color);
+    color: var(--secondary-color);
+    padding: 24px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 24px;
+    a {
+        text-decoration: none;
+        color: var(--secondary-color);
+    }
 }
 
 /* ------ Button Style ------ */
