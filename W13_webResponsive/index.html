@@ -27,9 +27,24 @@
                 </nav>
             </div>
             <div class="header-btn">
-                <button class="btn primary">Sign up</button>
+                <button class="btn primary">Sign Up</button>
                 <button class="btn secondary">Login</button>
             </div>
+            <div class="hamburger-menu" onclick="openMenu()">&#9776;</div>
+        </div>
+            <div class="full-screen-menu" id="fullScreenMenu">
+                <div class="close-btn" onclick="closeMenu()">✖</div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Sign up</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="../W12_01_Login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
         </div>
     </header>
     <div class="container">
@@ -150,7 +165,7 @@
                 <p>Your digital transformation partner.</p>
             </div>
             <div class="footer-menu">
-                <!-- <div class="f-item"> -->
+                <div class="f-item">
                     <ul>
                         <h4>Quick Links</h4>
                         <li><a href="#">Home</a></li>
@@ -159,27 +174,36 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
-                <!-- </div> -->
-                <!-- <div class="f-item"> -->
+                </div>
+                <div class="f-item">
                     <ul>
                         <h4>Legal</h4>
                         <li><a href="#">Privacy policy</a></li>
                         <li><a href="#">Terms of service</a></li>
                         <li><a href="#">Cookie policy</a></li>
                     </ul>
-                <!-- </div> -->
-                <!-- <div class="f-item"> -->
+                </div>
+                <div class="f-item">
                     <ul>
                         <h4>Stay Connected</h4>
                         <li><a href="#">LinkedIn</a></li>
                         <li><a href="#">Facebook</a></li>
                         <li><a href="#">Twitter</a></li>
                     </ul>
-                <!-- </div> -->
+                </div>
             </div>
         </div>
         </div>
     </footer>
+    <script>
+        function openMenu() {
+            document.getElementById("fullScreenMenu").style.display = "block";
+        }
+       
+        function closeMenu() {
+            document.getElementById("fullScreenMenu").style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
