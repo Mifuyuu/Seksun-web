@@ -94,7 +94,7 @@ nav {
 
 /* เมนูเต็มจอ */
 .full-screen-menu {
-    /* display: none; */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -445,5 +445,9 @@ footer {
         flex-direction: column;
         gap: 24px;
     }
+
+    /* .full-screen-menu {
+        display: block;
+    } */
     
 }
