@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --primary-color: #f26a2e;
+  --secondary-color: #111111;
+  --background-color: #1a1a1a;
+  --text-color: #f9f9f9;
+  --transition: all 0.25s ease;
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.banner {
+  /* display: flex; */
+  /* flex-direction: column; */
+  z-index: -999;
+  position: fixed;
+  background-image: url("../img/m.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 35%;
+  height: 340px;
+  width: 100%;
+  overflow: hidden;
+  /* background-blend-mode: darken; */
+  /* background-color: rgba(255, 255, 255, 0.45); */
+  /* -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 60%); */
+  mask-image: linear-gradient(180deg,
+      rgb(0, 0, 0) 10%,
+      rgba(0, 0, 0, 0.009) 90%);
+  mask-image: -moz-linear-gradient(180deg,
+      rgb(0, 0, 0) 10%,
+      rgba(0, 0, 0, 0.009) 90%);
+  mask-image: -webkit-linear-gradient(180deg,
+      rgb(0, 0, 0) 10%,
+      rgba(0, 0, 0, 0.009) 90%);
+  mask-image: linear-gradient(180deg,
+      rgb(0, 0, 0) 10%,
+      rgba(0, 0, 0, 0.009) 90%);
+}
+
+.menubar {
+  z-index: 999;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(15, 15, 15, 0.5);
+  padding: 20px;
+  /* border-radius: 10px; */
+  transition: var(--transition);
+  li {
+    list-style: none;
+    display: inline;
+    margin: 0 10px;
+    a {
+      text-decoration: none;
+      color: var(--text-color);
+      transition: var(--transition);
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.container {
+  padding-top: 5%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 1200px;
+  height: 100%;
+  /* border-radius: 10px; */
+  /* background-color: var(--background-color); */
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #333;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+  transition: var(--transition);
+  /* border: 3px solid #3b3b3bab; */
+
+  .profile-img {
+    background-image: url("../img/profile.jpg");
+    position: relative;
+    top: -75px;
+    /* left: -75px; */
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #333;
+  }
+  .profile-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    justify-content: center;
+    margin-top: -60px;
+  }
+}
+
+/* ========================== Timeline ========================== */
+
+.timeline {
+  min-height: 100vh;
+  margin-top: 50px;
+  position: relative; /* เปลี่ยนจาก fixed เป็น relative */
+}
+
+.timeline:before {
+  content: '';
+  position: absolute; /* เปลี่ยนจาก fixed เป็น absolute */
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  background-color: #fff;
+}
+
+.entries {
+  width: calc(100% - 80px);
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.entry {
+  width: calc(50% - 80px);
+  float: left;
+  padding: 20px;
+  clear: both;
+  text-align: right;
+  position: relative; /* ให้ .entry ใช้ relative เพื่อจัดวงกลม */
+}
+
+.entry:not(:first-child) {
+  margin-top: -60px;
+}
+
+.entry .title {
+  font-size: 32px;
+  margin-bottom: 12px;
+  position: relative;
+  color: #fff;
+}
+
+.entry .title:before {
+  content: '';
+  position: absolute;
+  width: 12px; /* ปรับขนาดวงกลมให้สัมพันธ์กับเส้น */
+  height: 12px;
+  border: 4px solid #ffffff;
+  background-color: #1D1D1D;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -110px;
+  z-index: 1000;
+}
+
+.entry:nth-child(2n) {
+  text-align: left;
+  float: right;
+}
+
+.entry:nth-child(2n) .title:before {
+  left: -110px; /* ปรับตำแหน่งของวงกลมฝั่งซ้าย */
+  right: auto;
+}
