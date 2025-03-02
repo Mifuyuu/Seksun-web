@@ -122,72 +122,32 @@ body {
   }
 }
 
-/* ========================== Timeline ========================== */
-
-.timeline {
-  min-height: 100vh;
-  margin-top: 50px;
-  position: relative; /* เปลี่ยนจาก fixed เป็น relative */
-}
-
-.timeline:before {
-  content: '';
-  position: absolute; /* เปลี่ยนจาก fixed เป็น absolute */
-  top: 0;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 4px;
-  background-color: #fff;
-}
-
-.entries {
-  width: calc(100% - 80px);
-  max-width: 800px;
-  margin: auto;
-  position: relative;
-}
-
-.entry {
-  width: calc(50% - 80px);
-  float: left;
+.skills {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  text-align: center;
+  margin: 20px;
   padding: 20px;
-  clear: both;
-  text-align: right;
-  position: relative; /* ให้ .entry ใช้ relative เพื่อจัดวงกลม */
+  border-radius: 10px;
+  background-color: #525252;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+  transition: var(--transition);
+  /* border: 3px solid #3b3b3bab; */
+
+  .skills-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #333;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+    transition: var(--transition);
+  }
 }
 
-.entry:not(:first-child) {
-  margin-top: -60px;
-}
-
-.entry .title {
-  font-size: 32px;
-  margin-bottom: 12px;
-  position: relative;
-  color: #fff;
-}
-
-.entry .title:before {
-  content: '';
-  position: absolute;
-  width: 12px; /* ปรับขนาดวงกลมให้สัมพันธ์กับเส้น */
-  height: 12px;
-  border: 4px solid #ffffff;
-  background-color: #1D1D1D;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -110px;
-  z-index: 1000;
-}
-
-.entry:nth-child(2n) {
-  text-align: left;
-  float: right;
-}
-
-.entry:nth-child(2n) .title:before {
-  left: -110px; /* ปรับตำแหน่งของวงกลมฝั่งซ้าย */
-  right: auto;
+.skill-items {
+  background-color: #f26a2e;
 }
