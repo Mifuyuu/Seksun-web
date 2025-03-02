@@ -19,6 +19,7 @@
     outline: 0;
     box-sizing: border-box;
     font-family: "Roboto", "Noto Sans Thai", sans-serif;
+    transition: var(--transition);
 }
 
 /* ----------------------- Background -----------------------*/
@@ -124,6 +125,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .home-page {
@@ -143,6 +145,8 @@ body {
     gap: 16px;
     position: relative;
     z-index: 1;
+    opacity: 0;
+    animation: slideInFromRight 1.5s ease-in-out forwards;
 }
 
 .content .title {
@@ -190,6 +194,11 @@ body {
     border-radius: 20px;
     box-shadow: 0 6px 16px -2px rgba(54, 85, 178, .12);
     width: 250px;
+    opacity: 0;
+    animation: slideInFromRight-15p 1.5s ease-in-out forwards;
+    &:hover {
+        transform: translateY(-5px);
+    }
 }
 
 .feature-box .icon-bg {
@@ -291,5 +300,29 @@ body {
     100% {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+/* ----------------------- Animation -----------------------*/
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(5%); /* เริ่มต้นอยู่นอกหน้าจอด้านขวา */
+        opacity: 0; /* ซ่อนเนื้อหาทั้งหมด */
+    }
+    100% {
+        transform: translateX(0); /* เลื่อนเข้ามาในหน้าจอ */
+        opacity: 1; /* ทำให้เนื้อหาแสดงผล */
+    }
+}
+
+@keyframes slideInFromRight-15p {
+    0% {
+        transform: translateX(15%); /* เริ่มต้นอยู่นอกหน้าจอด้านขวา */
+        opacity: 0; /* ซ่อนเนื้อหาทั้งหมด */
+    }
+    100% {
+        transform: translateX(0); /* เลื่อนเข้ามาในหน้าจอ */
+        opacity: 1; /* ทำให้เนื้อหาแสดงผล */
     }
 }
