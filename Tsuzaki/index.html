@@ -31,7 +31,7 @@
             <div class="title">Welcome to
                 <span class="highlight">Seksun</span>'s Website
             </div>
-                <p class="subtitle">ยินดีตอนรับเข้าสู่เว็บไซต์ของฉัน คลิกปุ่มด้านล่างเพื่อเข้าสู่หน้าหลัก</p>
+                <p class="subtitle">ยินดีต้อนรับเข้าสู่เว็บไซต์ของฉัน คลิกปุ่มด้านล่างเพื่อเข้าสู่หน้าหลัก</p>
                 <button class="btn primary icon-animation">เข้าสู่หน้าหลัก
                     <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
                 </button>
@@ -65,32 +65,6 @@
             <i id="theme-icon" class="fa-solid fa-moon" style="color: #2563eb; font-size: 32px;"></i>
         </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const themeIcon = document.getElementById("theme-icon");
-            const currentTheme = localStorage.getItem("theme") || "light-theme";
-
-            document.body.classList.add(currentTheme);
-            updateIcon(currentTheme);
-
-            themeIcon.addEventListener("click", () => {
-                const newTheme = document.body.classList.contains("light-theme") ? "dark-theme" : "light-theme";
-                document.body.classList.remove("light-theme", "dark-theme");
-                document.body.classList.add(newTheme);
-                localStorage.setItem("theme", newTheme);
-                updateIcon(newTheme);
-            });
-
-            function updateIcon(theme) {
-                if (theme === "dark-theme") {
-                    themeIcon.classList.replace("fa-moon", "fa-sun");
-                    themeIcon.style.color = "#ffd106";
-                } else {
-                    themeIcon.classList.replace("fa-sun", "fa-moon");
-                    themeIcon.style.color = "#2563eb";
-                }
-            }
-        });
-    </script>
+    <script src="script.min.js"></script>
 </body>
 </html>

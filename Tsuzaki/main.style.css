@@ -231,7 +231,7 @@ body {
     padding: 24px;
     border-radius: 20px;
     box-shadow: 0 6px 16px -2px rgba(54, 85, 178, .12);
-    width: 250px;
+    width: 350px;
     &:hover {
         transform: translateY(-5px);
     }
@@ -374,3 +374,32 @@ body {
 }
 
 /* ----------------------- Responsive -----------------------*/
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 8px 16px;
+    }
+
+    .home-page {
+        margin-top: 20%;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .feature-box {
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}
