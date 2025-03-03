@@ -13,6 +13,7 @@
     --box-shadow: 0 6px 16px -2px rgba(54, 85, 178, .12);
 }
 
+/* ----------------------- Light Theme -----------------------*/
 
 .light-theme {
     --title-color: #202020;
@@ -25,6 +26,7 @@
 }
 
 /* ----------------------- Dark Theme -----------------------*/
+
 .dark-theme {
     --title-color: #fff;
     --navbar-background-color: #1a1a1a;
@@ -375,28 +377,40 @@ body {
 @media screen and (max-width: 768px) {
     .navbar {
         padding: 8px 16px;
+        opacity: 1;
+        animation: none;
     }
 
     .home-page {
-        margin-top: 20%;
+        margin-top: 15%;
     }
 
     .content {
         flex-direction: column;
-        gap: 8px;
+        opacity: 1;
+        animation: none;
+    }
+    p {
+        font-size: 20px;
     }
 
     .features {
         flex-direction: column;
         gap: 8px;
+        opacity: 1;
+        animation: none;
     }
 
     .feature-box {
         width: 100%;
+        /* width: 350px; */
+        h3 {
+            font-size: 24px;
+        }
     }
 
     .btn {
-        font-size: 16px;
+        font-size: 20px;
         padding: 8px 12px;
     }
 }
