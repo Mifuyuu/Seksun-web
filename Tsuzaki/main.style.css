@@ -9,7 +9,7 @@
     --quinary-color: #09f;
     --white: #fff;
     --black: #202020;
-    --transition: all 0.3s ease;
+    --transition: all 0.3s ease-in-out;
     --box-shadow: 0 6px 16px -2px rgba(54, 85, 178, .12);
 }
 
