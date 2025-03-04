@@ -9,12 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         .content {
             max-width: 1200px;
             display: grid;
@@ -32,6 +26,10 @@
         .card-container {
             margin-top: 0;
             padding-top: 0;
+        }
+
+        .card {
+            width: 100%;
         }
 
         .profile-box {
@@ -164,8 +162,15 @@
         @media screen and (max-width: 1200px) {
 
             .navbar {
-                animation: none;
+                padding: 16px 16px;
                 opacity: 1;
+                animation: none;
+            }
+
+            .home-page {
+                width: 100%;
+                padding: 16px;
+                margin-top: 15%;
             }
 
             .content {
@@ -191,11 +196,18 @@
             }
 
             .card-front {
-                width: 100%; 
+                width: 100%;
             }
 
             .rows-reverse {
                 align-items: start;
+            }
+
+        }
+
+        @media screen and (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -216,7 +228,6 @@
                 </button>
                 <button onclick="window.open('https://github.com/Mifuyuu', '_blank');" class="btn primary">GitHub
                     <i class="fa-brands fa-github ico-white" style="font-size: 24px;"></i>
-                    <!-- <i class="fa-solid fa-right-to-bracket"></i> -->
                 </button>
                 <div class="theme-changer">
                     <i id="theme-icon" class="fa-solid fa-moon"></i>
