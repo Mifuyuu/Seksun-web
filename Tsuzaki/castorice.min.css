@@ -23,6 +23,7 @@
     --text-color: #202020;
     --box-background-color: #fff;
     --box-text-color: #202020;
+    --card-background-color: #ffffff75;
 
 }
 
@@ -35,6 +36,7 @@
     --text-color: #fff;
     --box-background-color: #242424;
     --box-text-color: #fff;
+    --card-background-color: #16161675;
 }
 
 /* ----------------------- Global Styles -----------------------*/
@@ -114,6 +116,7 @@
 .navbar h1 {
     color: var(--primary-color);
     font-size: 24px;
+    text-shadow: var(--box-shadow);
     text-transform: uppercase;
 }
 
@@ -162,6 +165,7 @@ body {
     background-color: var(--background-color);
     transition: background-color 0.3s ease, color 0.3s ease;
     user-select: none;
+    scroll-behavior: smooth;
 }
 
 .home-page {
