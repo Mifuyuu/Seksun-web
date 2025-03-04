@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsuzaki Dev</title>
+    <link rel="stylesheet" href="castorice.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+
+        .light-theme {
+            --card-background-color: #ffffff75;
+        }
+
+        .dark-theme {
+            --card-background-color: #16161675;
+        }
+
+        .card-container {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .profile-box {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            background-image: url('img/profile.jpg');
+            background-size: cover;
+            background-position: 20% 20%;
+        }
+
+        .card .profile-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+        .card:hover .profile-img::after {
+            opacity: 1;
+        }
+
+        .card:hover .profile-img {
+            transform: scale(1.1);
+        }
+
+        .cols {
+            gap: 48px;
+            flex-direction: column;
+            margin-top: 0;
+            padding-bottom: 8px;
+        }
+
+        .card-container {
+            margin-bottom: 48px;
+        }
+
+        .rows {
+            align-items: center;
+            flex-direction: row;
+            width: 1200px;
+            max-width: 1200px;
+            gap: 24px;
+        }
+
+        .rows-reverse {
+            align-items: center;
+            flex-direction: row-reverse;
+            width: 1200px;
+            max-width: 1200px;
+            gap: 24px;
+        }
+
+        .card-front {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            margin: auto;
+        }
+
+        .card-content {
+            width: 70%;
+            /* flex-direction: column; */
+            padding: 24px;
+            /* border-radius: 10px; */
+
+            h3 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 1.6;
+            }
+
+            .highlight {
+                color: #2563eb;
+            }
+        }
+
+        .card .icon-bg {
+            width: 120px;
+            height: 120px;
+        }
+
+        .card .icon-bg {
+            margin-bottom: 0;
+        }
+
+        .card-front i {
+            font-size: 100px;
+        }
+
+        .card {
+            background-color: var(--card-background-color);
+        }
+
+        .grid {
+            max-width: 1250px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* gap: 24px; */
+            .card {
+                width: 100%;
+                h3 {
+                    margin-top: 12px;
+                }
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="blob-outer-container">
+        <div class="blob-inner-container">
+            <div class="blob"></div>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar">
+            <h1>Castorice</h1>
+            <div class="nav-btn">
+                <button onclick="location.href='index.html';" class="btn primary">กลับหน้าแรก
+                    <i class="fa-solid fa-right-to-bracket ico-white" style="font-size: 20px;"></i>
+                </button>
+                <button onclick="window.open('https://github.com/Mifuyuu', '_blank');" class="btn primary">GitHub
+                    <i class="fa-brands fa-github ico-white" style="font-size: 24px;"></i>
+                    <!-- <i class="fa-solid fa-right-to-bracket"></i> -->
+                </button>
+                <div class="theme-changer">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="home-page">
+        <section class="content">
+            <div class="title"><span class="highlight">About Me</span></div>
+            <p class="subtitle">เกี่ยวกับฉัน ข้อมูลด้านล่างนี้จะแสดงรายละเอียดของตัวฉันในตอนนี้อย่างคร่าว ๆ</p>
+                <div class="card-container cols">
+                    <div class="card rows">
+                        <div class="card-front">
+                            <div class="profile-box">
+                                <div class="profile-img"></div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>ประวัติ</h3>
+                            <p><span class="highlight">ชื่อ-สกุล :</span> นายเสกสรรญ หลำวรรณะ</p>
+                            <p><span class="highlight">เบอร์โทรศัพท์ :</span> 065-668-58XX</p>
+                            <p><span class="highlight">เมลล์ :</span> 664230033@webmail.npru.ac.th</p>
+                            <p><span class="highlight">คติ :</span> ให้เป็นเรื่องของตัวเราในวันพรุ่งนี้</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="title"><span class="highlight">education</span></div>
+                <p class="subtitle">รายละเอียดประวัติการศึกษาของฉัน ข้อมูลด้านล่างนี้จะแสดงประวัติการศึกษาของฉัน เริ่มตั้งแต่ระดับประถมศึกษา จนถึงปัจจุบัน</p>
+                <div class="card-container cols">
+                    <div class="card rows-reverse">
+                        <div class="card-front">
+                            <!-- <div class="icon-bg"> -->
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            <!-- </div> -->
+                        </div>
+                        <div class="card-content">
+                            <h3>ประวัติการศึกษา</h3>
+                            <p>รายละเอียดการศึกษา เริ่มตั้งแต่ชั้นประถมศึกษา จนถึงปัจจุบัน</p>
+                            <p>เริ่มเรียนระดับประถมศึกษาที่ <span class="highlight">โรงเรียนวัดสามง่าม (คงทองอนุสรณ์)</span></p>
+                            <p>เริ่มเรียนระดับมัธยมศึกษาที่ <span class="highlight">โรงเรียนคงทองวิทยา</span></p>
+                            <p>กำลังศึกษาอยู่ระดับอุดมศึกษาที่ <span class="highlight">มหาวิทยาลัยราชภัฏนครปฐม</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="title"><span class="highlight">Skills</span></div>
+                <p class="subtitle">ข้อมูลความสามารถ ข้อมูลด้านล่างนี้จะแสดงข้อมูลความสามารถต่าง ๆ ของฉัน ในอนาคตฉันจะต้องมีความสามารถมากกว่านี้อย่างแน่นอน!</p>
+                <div class="card-container grid">
+                    <div class="card">
+                        <div class="icon-bg">
+                            <i class="fa-brands fa-java fa-4x"></i>
+                        </div>
+                        <h3>JAVA</h3>
+                        <p>สามรถเขียนได้ในระดับพื้นฐาน ไปจนถึงระดับกลาง สามารถแก้ปัญหาได้</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-bg">
+                            <i class="fa-brands fa-html5 fa-4x"></i>
+                        </div>
+                        <h3>HTML5</h3>
+                        <p>สามารถเข้าใจการออกแบบ layout ส่วนประกอบต่าง ๆ และสามารถเขียนได้ในระดับกลาง</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-bg">
+                            <i class="fa-brands fa-css3 fa-4x"></i>
+                        </div>
+                        <h3>CSS</h3>
+                        <p>มีความเข้าใจ และสามารถตั้งค่า ปรับเปลี่ยน หรือแก้ปัญหาได้</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-bg">
+                            <i class="fa-brands fa-js fa-4x"></i>
+                        </div>
+                        <h3>JavaScript</h3>
+                        <p>มีความเข้าใจในระดับหนึ่ง สามารถแก้ปัญหาบางอย่างได้</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-bg">
+                            <i class="fa-brands fa-figma fa-4x"></i>
+                        </div>
+                        <h3>Figma</h3>
+                        <p>สามารถออกแบบ และสร้างออกมาได้ สามารถแก้ปัญหาต่าง ๆ ได้</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-bg">
+                            <i class="fa-brands fa-node-js fa-4x"></i>
+                        </div>
+                        <h3>Node js</h3>
+                        <p>สามารถเขียนได้พอสมควร พอเข้าใจหลัก และสามารถแก้ปัญหาได้</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-bg">
+                            <i class="fa-brands fa-php fa-4x"></i>
+                        </div>
+                        <h3>PHP</h3>
+                        <p>มีความเข้าใจในภาษาระดับหนึ่ง สามารถเขียน ปรับแต่งและแก้ปัญหาได้บางอย่างเท่านั้น</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-bg">
+                            <i class="fa-brands fa-python fa-4x"></i>
+                        </div>
+                        <h3>Python</h3>
+                        <p>มีแผนที่จะทำการศึกษาเพิ่มเติมในอนาคต ตอนนี้เพียงแค่สามารถเข้าใจและแก้ไขได้บางส่วนเท่านั้น</p>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <script src="script.min.js"></script>
+</body>
+</html>

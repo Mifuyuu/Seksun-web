@@ -1,0 +1,837 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seksun Portfolio - หน้าหลัก</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #7c3aed;
+            --tertiary-color: #06b6d4;
+            --quaternary-color: #8b5cf6;
+            --quinary-color: #3b82f6;
+            --white: #fff;
+            --black: #111827;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.25);
+            --glow-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
+            --text-shadow: 0 0 8px rgba(79, 70, 229, 0.3);
+        }
+
+        /* ----------------------- Light Theme -----------------------*/
+
+        .light-theme {
+            --title-color: #111827;
+            --navbar-background-color: rgba(255, 255, 255, 0.9);
+            --background-color: #f9fafb;
+            --text-color: #374151;
+            --box-background-color: rgba(255, 255, 255, 0.9);
+            --box-text-color: #4b5563;
+            --box-shadow-color: rgba(79, 70, 229, 0.15);
+            --glass-effect: saturate(180%) blur(10px);
+        }
+
+        /* ----------------------- Dark Theme -----------------------*/
+
+        .dark-theme {
+            --title-color: #f9fafb;
+            --navbar-background-color: rgba(17, 24, 39, 0.85);
+            --background-color: #030712;
+            --text-color: #e5e7eb;
+            --box-background-color: rgba(31, 41, 55, 0.8);
+            --box-text-color: #d1d5db;
+            --box-shadow-color: rgba(139, 92, 246, 0.15);
+            --glass-effect: saturate(180%) blur(10px);
+        }
+
+        /* ----------------------- Global Styles -----------------------*/
+
+        * {
+            padding: 0;
+            margin: 0;
+            outline: 0;
+            box-sizing: border-box;
+            font-family: "Kanit", "Noto Sans Thai", sans-serif;
+            transition: var(--transition);
+        }
+
+        /* ----------------------- Background -----------------------*/
+
+        .blob-outer-container {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+            inset: 0;
+            margin: auto;
+            filter: blur(120px);
+            opacity: 0.6;
+            overflow: hidden;
+        }
+
+        .blob-inner-container {
+            border-radius: 99999px;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 80vw;
+            height: 80vh;
+            min-width: unset;
+            overflow: hidden;
+            transform: scale(1.2);
+        }
+
+        .blob {
+            position: fixed;
+            width: 120vw;
+            height: 120vh;
+            inset: 0;
+            margin: auto;
+            background: conic-gradient(from 0deg, #818cf8, #a78bfa, #f472b6, #34d399, #60a5fa, #818cf8, #a78bfa, #f472b6, #34d399, #60a5fa);
+            animation: spinBlob 20s linear infinite;
+        }
+
+        @keyframes spinBlob {
+            0% {
+                transform: rotate(0deg) scale(2.2);
+            }
+
+            100% {
+                transform: rotate(1turn) scale(2.2);
+            }
+        }
+
+        /* ----------------------- NavBar -----------------------*/
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--navbar-background-color);
+            backdrop-filter: var(--glass-effect);
+            -webkit-backdrop-filter: var(--glass-effect);
+            padding: 16px 36px;
+            width: 100%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            opacity: 0;
+            animation: FromTop-5p 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-shadow: var(--text-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navbar h1::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(90deg, var(--primary-color), var(--tertiary-color));
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .navbar h1:hover::after {
+            transform: translateX(0);
+        }
+
+        .navbar a,
+        .navbar button {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #6b7280;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .navbar a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* ----------------------- Content -----------------------*/
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            background-color: var(--background-color);
+            min-height: 100vh;
+        }
+
+        .home-page {
+            margin-top: 12%;
+            display: grid;
+            place-items: center;
+            width: 100%;
+            max-width: 1400px;
+            padding: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            animation: slideInFromRight 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .content .title {
+            color: var(--title-color);
+            font-weight: 900;
+            font-size: 72px;
+            border-radius: 10px;
+            white-space: pre-line;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            text-shadow: var(--text-shadow);
+        }
+
+        .content .subtitle {
+            color: var(--text-color);
+            font-size: 22px;
+            text-align: center;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background: linear-gradient(to right, #4f46e5, #7c3aed, #8b5cf6, #06b6d4, #4f46e5);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: gradientText 5s linear infinite;
+            position: relative;
+            display: inline-block;
+            font-weight: 900;
+            filter: drop-shadow(0 0 8px rgba(79, 70, 229, 0.5));
+        }
+
+        .highlight::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            bottom: 5px;
+            left: 0;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed, #8b5cf6, #06b6d4);
+            border-radius: 2px;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.5s ease;
+        }
+
+        .highlight:hover::after {
+            transform-origin: bottom left;
+            transform: scaleX(1);
+        }
+
+        @keyframes gradientText {
+            0% {
+                background-position: 0% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            padding: 36px 24px;
+            opacity: 0;
+            animation: slideInFromRight-15p 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            margin-top: 24px;
+            width: 100%;
+        }
+
+        .feature-box {
+            display: flex;
+            flex-direction: column;
+            color: var(--box-text-color);
+            background-color: var(--box-background-color);
+            backdrop-filter: var(--glass-effect);
+            -webkit-backdrop-filter: var(--glass-effect);
+            gap: 16px;
+            padding: 36px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px -5px var(--box-shadow-color);
+            width: calc(100% / 3 - 32px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.5s ease;
+        }
+
+        .feature-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(79, 70, 229, 0.1), rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.1));
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: -1;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 40px -10px var(--box-shadow-color), 0 0 20px rgba(79, 70, 229, 0.3);
+        }
+
+        .feature-box:hover::before {
+            opacity: 1;
+        }
+
+        .feature-box .icon-bg {
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(6, 182, 212, 0.1));
+            padding: 20px;
+            margin-bottom: 16px;
+            border-radius: 16px;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 20px -10px rgba(79, 70, 229, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-box .icon-bg::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(45deg, rgba(79, 70, 229, 0.2), rgba(124, 58, 237, 0.2), rgba(6, 182, 212, 0.2));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .feature-box:hover .icon-bg::after {
+            opacity: 1;
+        }
+
+        .feature-box:hover i {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 8px rgba(79, 70, 229, 0.5));
+        }
+
+        .feature-box i {
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.5s ease;
+            z-index: 1;
+        }
+
+        .feature-box h3 {
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            position: relative;
+            width: fit-content;
+        }
+
+        .feature-box h3::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(90deg, var(--primary-color), var(--tertiary-color));
+            border-radius: 2px;
+        }
+
+        .feature-box p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* ----------------------- Button -----------------------*/
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            width: fit-content;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--white);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn svg, .btn i {
+            margin-left: 8px;
+            width: 24px;
+            height: 24px;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn.primary {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 10px 20px -10px rgba(79, 70, 229, 0.5);
+        }
+
+        .btn.primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary-color), var(--tertiary-color));
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.4s ease;
+        }
+
+        .btn.primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -10px rgba(79, 70, 229, 0.6);
+        }
+
+        .btn.primary:hover::before {
+            opacity: 1;
+        }
+
+        .btn.primary.icon-animation i {
+            animation: arrowLoop 1.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes arrowLoop {
+            0% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateX(15px);
+                opacity: 0;
+            }
+
+            51% {
+                transform: translateX(-15px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* ----------------------- Animation -----------------------*/
+
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(5%) scale(0.95);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromRight-15p {
+            0% {
+                transform: translateX(15%) scale(0.9);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes FromTop-5p {
+            0% {
+                transform: translateY(-15%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* ----------------------- Dark Mode -----------------------*/
+
+        .theme-changer {
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .theme-changer i {
+            cursor: pointer;
+            font-size: 32px;
+            width: 32px;
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+        }
+
+        .theme-changer i:hover {
+            transform: rotate(30deg) scale(1.2);
+            color: var(--primary-color) !important;
+        }
+
+        /* ----------------------- Responsive -----------------------*/
+        @media screen and (max-width: 1200px) {
+            .content .title {
+                font-size: 56px;
+            }
+
+            .content .subtitle {
+                font-size: 20px;
+            }
+
+            .features {
+                gap: 24px;
+            }
+            
+            .feature-box {
+                padding: 30px;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .features {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .feature-box {
+                width: 100%;
+                max-width: 600px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                padding: 12px 20px;
+                opacity: 1;
+                animation: none;
+            }
+
+            .navbar h1 {
+                font-size: 24px;
+            }
+
+            .home-page {
+                width: 100%;
+                padding: 16px;
+                margin-top: 20%;
+            }
+
+            .content {
+                flex-direction: column;
+                opacity: 1;
+                animation: none;
+            }
+
+            .content .title {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .features {
+                flex-direction: column;
+                gap: 24px;
+                opacity: 1;
+                animation: none;
+                padding: 24px 16px;
+            }
+
+            .feature-box {
+                width: 100%;
+            }
+
+            .feature-box h3 {
+                font-size: 22px;
+            }
+
+            .btn {
+                font-size: 18px;
+                padding: 10px 16px;
+            }
+        }
+
+        /* เพิ่มเอฟเฟกต์การเคลื่อนไหวของหัวข้อ */
+        .title {
+            animation: textPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes textPulse {
+            0%, 100% {
+                text-shadow: 0 0 8px rgba(79, 70, 229, 0.3);
+            }
+            50% {
+                text-shadow: 0 0 15px rgba(79, 70, 229, 0.7);
+            }
+        }
+
+        /* เพิ่มเอฟเฟกต์ hover ที่สวยงามให้กับปุ่ม */
+        .btn.primary:active {
+            transform: scale(0.95);
+        }
+
+        /* เพิ่ม particle effect สำหรับพื้นหลัง */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(79, 70, 229, 0.5);
+            box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+            animation: float 15s linear infinite;
+            opacity: 0.2;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            25% {
+                transform: translateY(-100px) translateX(100px);
+            }
+            50% {
+                transform: translateY(-200px) translateX(0);
+            }
+            75% {
+                transform: translateY(-100px) translateX(-100px);
+            }
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        /* เพิ่มเอฟเฟกต์เรืองแสงตามเมาส์ */
+        .glow-effect {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(79, 70, 229, 0.4) 0%, rgba(79, 70, 229, 0) 70%);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 0;
+            animation: fadeOut 1s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                width: 0;
+                height: 0;
+            }
+            100% {
+                opacity: 0;
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        /* เพิ่มเอฟเฟกต์ไฮไลท์ที่สวยงามมากขึ้น */
+        .highlight {
+            position: relative;
+            z-index: 1;
+        }
+
+        .highlight::before {
+            content: "";
+            position: absolute;
+            top: -10%;
+            left: -2%;
+            width: 104%;
+            height: 120%;
+            background: radial-gradient(ellipse at center, rgba(79, 70, 229, 0.2) 0%, rgba(79, 70, 229, 0) 70%);
+            opacity: 0;
+            z-index: -1;
+            transform: scale(0.8);
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .highlight:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* เพิ่มเอฟเฟกต์ scrollbar ที่สวยงาม */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--background-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(var(--quaternary-color), var(--tertiary-color));
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <!-- พาร์ติเคิลเอฟเฟกต์ -->
+    <div id="particles" class="particles"></div>
+    
+    <!-- เอฟเฟกต์พื้นหลัง Blob -->
+    <div class="blob-outer-container">
+        <div class="blob-inner-container">
+            <div class="blob"></div>
+        </div>
+    </div>
+    
+    <!-- แถบนำทาง -->
+    <header>
+        <nav class="navbar">
+            <h1>Seksun Studio</h1>
+            <div class="nav-btn">
+                <button class="btn primary">
+                    GitHub
+                    <i class="fa-brands fa-github"></i>
+                </button>
+                <div class="theme-changer">
+                    <i id="theme-icon" class="fa-solid fa-moon" style="color: #4f46e5;"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- เนื้อหาหลัก -->
+    <main class="home-page">
+        <section class="content">
+            <div class="title">ยินดีต้อนรับสู่โลกของ <span class="highlight">Seksun</span></div>
+            <p class="subtitle">ค้นพบเรื่องราวและผลงานสร้างสรรค์บนเว็บไซต์ของฉัน ที่นี่คุณจะได้เห็นผลงานการพัฒนาเว็บไซต์และการออกแบบที่ทันสมัย</p>
+            <button class="btn primary icon-animation">
+                เข้าสู่เว็บไซต์ 
+                <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+            </button>
+            
+            <!-- ส่วนคุณลักษณะเด่น -->
+            <div class="features">
+                <div class="feature-box">
+                    <div class="icon-bg">
+                        <i class="fa-solid fa-user fa-2x" style="color: #4f46e5;"></i>
+                    </div>
+                    <h3>เกี่ยวกับตัวฉัน</h3>
+                    <p>นักพัฒนาเว็บไซต์และนักออกแบบที่มีความหลงใหลในการสร้างสรรค์ประสบการณ์ดิจิทัลที่น่าประทับใจ พร้อมแบ่งปันเรื่องราวและแนวคิดผ่านโปรเจกต์ต่างๆ</p>
+                </div>
+                <div class="feature-box">
+                    <div class="icon-bg">
+                        <i class="fa-solid fa-folder-open fa-2x" style="color: #4f46e5;"></i>
+                    </div>
+                    <h3>ผลงานของฉัน</h3>
+                    <p>รวบรวมผลงานการพัฒนาเว็บไซต์ การออกแบบ UI/UX และโครงการที่น่าสนใจ สัมผัสประสบการณ์ใหม่ๆ ผ่านผลงานที่เต็มไปด้วยความคิดสร้างสรรค์</p>
+                </div>
+                <div class="feature-box">
+                    <div class="icon-bg">
+                        <i class="fa-solid fa-code fa-2x" style="color: #4f46e5;"></i>
+                    </div>
+                    <h3>โปรเจกต์อนาคต</h3>
+                    <p>เปิดเผยแผนงานและโครงการที่กำลังจะเกิดขึ้นในอนาคต ติดตามการอัปเดตล่าสุดและร่วมเป็นส่วนหนึ่งในการเดินทางสู่นวัตกรรมใหม่ๆ</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // ฟังก์ชันสลับธีม
+            const themeIcon = document.getElementById("theme-icon");
+            const currentTheme = localStorage.getItem("theme") || "light-theme";
+
+            document.body.classList.add(currentTheme);
+            updateIcon(currentTheme);
+
+            themeIcon.addEventListener("click", () => {
+                const newTheme = document.body.classList.contains("light-theme") ? "dark-theme" : "light-theme";
+                document.body.classList.remove("light-theme", "dark-theme");
+                document.body.classList.add(newTheme);
+                localStorage.setItem("theme", newTheme);
+                updateIcon(newTheme);
+            });
+
+            function updateIcon(theme) {
+                if (theme === "dark-theme") {
+                    themeIcon.classList.replace("fa-moon", "fa-sun");
+                    themeIcon.style.color = "#f9fafb";
+                } else {
+                    themeIcon.classList.replace("fa-sun", "fa-moon");
+                    themeIcon.style.color = "#4f46e5";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
