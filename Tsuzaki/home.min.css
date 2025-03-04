@@ -39,7 +39,7 @@
     --card-background-color: #16161675;
 }
 
-/* ----------------------- Global Styles -----------------------*/
+/* --------------------- Global Styles ---------------------*/
 
 * {
     padding: 0;
@@ -50,7 +50,7 @@
     transition: var(--transition);
 }
 
-/* ----------------------- Background -----------------------*/
+/* ---------------------- Background ----------------------*/
 
 .blob-outer-container {
     position: fixed;
