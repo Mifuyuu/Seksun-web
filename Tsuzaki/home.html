@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tsuzaki Dev</title>
-    <link rel="stylesheet" href="castorice.min.css">
+    <link rel="stylesheet" href="home.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
 
@@ -66,6 +66,7 @@
             flex-direction: column;
             margin-top: 0;
             padding-bottom: 8px;
+            width: 100%;
         }
 
         .card-container {
@@ -87,9 +88,6 @@
             width: 100%;
             max-width: 1200px;
             gap: 24px;
-            p {
-                text-wrap: nowrap;
-            }
         }
 
         .card-front {
@@ -169,6 +167,24 @@
                 animation: none;
                 opacity: 1;
             }
+
+            .content .title {
+                font-size: 48px;
+            }
+
+            .content .subtitle {
+                font-size: 20px;
+            }
+
+            .card-container {
+                gap: 24px;
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+
             .grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -176,6 +192,8 @@
         }
 
         @media screen and (max-width: 768px) {
+
+
             .card {
                 flex-direction: column;
                 text-align: center;
@@ -184,22 +202,44 @@
             .card-content {
                 width: 100%;
                 text-align: start;
-                margin: auto;
             }
 
             .card-front {
                 width: 100%;
             }
 
-            .rows-reverse {
+            .rows {
+                flex-direction: column;
                 align-items: start;
+            }
+
+            .rows-reverse {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .grid {
+                grid-template-columns: repeat(1, 1fr);
             }
 
         }
 
         @media screen and (max-width: 480px) {
+
+            .hide-text {
+                display: none;
+            }
+
+            .nav-btn .btn {
+                padding: 8px 8px;
+            }
+
             .grid {
                 grid-template-columns: 1fr;
+            }
+
+            .btn {
+                font-size: 16px;
             }
         }
 
@@ -215,10 +255,10 @@
         <nav class="navbar">
             <h1>Castorice</h1>
             <div class="nav-btn">
-                <button onclick="location.href='index.html';" class="btn primary">กลับหน้าแรก
-                    <i class="fa-solid fa-right-to-bracket ico-white" style="font-size: 20px;"></i>
+                <button onclick="location.href='index.html';" class="btn primary"><span class="hide-text">กลับหน้าแรก</span>
+                    <i class="fa-solid fa-right-to-bracket ico-white" style="font-size: 24px;"></i>
                 </button>
-                <button onclick="window.open('https://github.com/Mifuyuu', '_blank');" class="btn primary">GitHub
+                <button onclick="window.open('https://github.com/Mifuyuu', '_blank');" class="btn primary"><span class="hide-text">GitHub</span>
                     <i class="fa-brands fa-github ico-white" style="font-size: 24px;"></i>
                 </button>
                 <div class="theme-changer">
