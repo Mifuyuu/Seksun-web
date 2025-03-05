@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tsuzaki Dev</title>
-    <link rel="stylesheet" href="home.min.css">
+    <!-- <link rel="stylesheet" href="home.min.css"> -->
+     <link rel="stylesheet" href="castorice.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
 
@@ -94,7 +95,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 30%;
+            /* width: 30%; */
             margin: auto;
         }
 
@@ -113,7 +114,7 @@
                 line-height: 1.6;
             }
 
-            .highlight {
+            .text-highlight {
                 color: #2563eb;
             }
         }
@@ -146,6 +147,17 @@
                 p {
                     font-size: 18px;
                 }
+            }
+        }
+
+        .card-content.lowres {
+            display: none;
+            flex-direction: column;
+            h3 {
+            text-align: center;
+            }
+            p {
+                text-wrap: wrap;
             }
         }
 
@@ -231,9 +243,27 @@
                 grid-template-columns: repeat(1, 1fr);
             }
 
+            p.subtitle {
+                padding: 0 24px;
+            }
+
         }
 
         @media screen and (max-width: 480px) {
+
+            .home-page {
+                margin-top: 24%;
+            }
+
+            .profile-box {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 24px;
+            }
+
+            .card-front {
+                width: auto;
+            }
 
             .hide-text {
                 display: none;
@@ -256,6 +286,23 @@
 
             .btn {
                 font-size: 16px;
+            }
+
+            .card-content.highres {
+                display: none;
+            }
+
+            .card-content.lowres {
+                padding: 0;
+                display: block;
+                word-wrap: break-word;
+                p {
+                    font-size: 20px;
+                }
+            }
+
+            .card-content h3 {
+                text-align: center;
             }
         }
 
@@ -294,12 +341,23 @@
                                 <div class="profile-img"></div>
                             </div>
                         </div>
-                        <div class="card-content">
+                        <div class="card-content highres">
                             <h3>ประวัติ</h3>
-                            <p><span class="highlight">ชื่อ-สกุล :</span> นายเสกสรรญ หลำวรรณะ</p>
-                            <p><span class="highlight">เบอร์โทรศัพท์ :</span> 065-668-58XX</p>
-                            <p><span class="highlight">เมลล์ :</span> 664230033@webmail.npru.ac.th</p>
-                            <p><span class="highlight">คติ :</span> ให้เป็นเรื่องของตัวเราในวันพรุ่งนี้</p>
+                            <p><span class="text-highlight">ชื่อ-สกุล :</span> นายเสกสรรญ หลำวรรณะ</p>
+                            <p><span class="text-highlight">เบอร์โทรศัพท์ :</span> 065-668-58XX</p>
+                            <p><span class="text-highlight">เมลล์ :</span> 664230033@webmail.npru.ac.th</p>
+                            <p><span class="text-highlight">คติ :</span> ให้เป็นเรื่องของตัวเราในวันพรุ่งนี้</p>
+                        </div>
+                        <div class="card-content lowres">
+                            <h3>ประวัติ</h3>
+                            <p><span class="text-highlight">ชื่อ-สกุล :</span></p>
+                            <p>นายเสกสรรญ หลำวรรณะ</p>
+                            <p><span class="text-highlight">เบอร์โทรศัพท์ :</span></p>
+                            <p>065-668-58XX</p>
+                            <p><span class="text-highlight">เมลล์ :</span></p>
+                            <p>664230033 @webmail.npru.ac.th</p>
+                            <p><span class="text-highlight">คติ :</span></p>
+                            <p>ให้เป็นเรื่องของตัวเราในวันพรุ่งนี้</p>
                         </div>
                     </div>
                 </div>
@@ -308,16 +366,14 @@
                 <div class="card-container cols">
                     <div class="card rows-reverse">
                         <div class="card-front">
-                            <!-- <div class="icon-bg"> -->
-                                <i class="fa-solid fa-graduation-cap"></i>
-                            <!-- </div> -->
+                            <i class="fa-solid fa-graduation-cap"></i>
                         </div>
                         <div class="card-content">
                             <h3>ประวัติการศึกษา</h3>
                             <p>รายละเอียดการศึกษา เริ่มตั้งแต่ชั้นประถมศึกษา จนถึงปัจจุบัน</p>
-                            <p>เริ่มเรียนระดับประถมศึกษาที่ <span class="highlight">โรงเรียนวัดสามง่าม (คงทองอนุสรณ์)</span></p>
-                            <p>เริ่มเรียนระดับมัธยมศึกษาที่ <span class="highlight">โรงเรียนคงทองวิทยา</span></p>
-                            <p>กำลังศึกษาอยู่ระดับอุดมศึกษาที่ <span class="highlight">มหาวิทยาลัยราชภัฏนครปฐม</span></p>
+                            <p>เริ่มเรียนระดับประถมศึกษาที่ <span class="text-highlight">โรงเรียนวัดสามง่าม (คงทองอนุสรณ์)</span></p>
+                            <p>เริ่มเรียนระดับมัธยมศึกษาที่ <span class="text-highlight">โรงเรียนคงทองวิทยา</span></p>
+                            <p>กำลังศึกษาอยู่ระดับอุดมศึกษาที่ <span class="text-highlight">มหาวิทยาลัยราชภัฏนครปฐม</span></p>
                         </div>
                     </div>
                 </div>
