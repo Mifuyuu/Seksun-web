@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tsuzaki Dev</title>
-    <!-- <link rel="stylesheet" href="home.min.css"> -->
      <link rel="stylesheet" href="castorice.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -102,7 +101,7 @@
         .card-content {
             width: 70%;
             /* flex-direction: column; */
-            padding: 24px;
+            /* padding: 24px; */
             /* border-radius: 10px; */
 
             h3 {
@@ -200,7 +199,17 @@
             }
 
             .grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr);  
+                min-width: 700px;
+                text-wrap: wrap;
+                /* word-wrap: break-word; */
+                word-break: break-word;
+                white-space: normal;
+                /* padding: 0; */
+            }
+
+            .card-content {
+                padding: 0px;
             }
             
         }
@@ -233,8 +242,10 @@
             }
 
             .rows {
-                display: grid;
-                gap: 0px;
+                display: flex;
+                flex-direction: row;
+                gap: 24px;
+                word-break: break-all
             }
 
             .rows-reverse {
@@ -245,6 +256,7 @@
 
             .grid {
                 grid-template-columns: repeat(1, 1fr);
+                min-width: 0;
             }
 
             p.subtitle {
@@ -287,6 +299,7 @@
 
             .rows {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 gap: 0px;
             }
@@ -467,83 +480,11 @@
                         </div>
                     </div>
                 </div>
-<!-- Contact Me -->
-                <div id="contact" class="title"><span class="highlight">Projects</span></div>
+<!-- Project Me -->
+                <div id="project" class="title"><span class="highlight">Projects</span></div>
                 <p class="subtitle">Soon..</p>
-                <!-- <div class="card-container grid">
-                    <div class="card rows">
-                        <div class="icon-bg">
-                            <i class="fa-brands fa-java fa-4x"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>JAVA</h3>
-                            <p>สามรถเขียนได้ในระดับพื้นฐาน ไปจนถึงระดับกลาง สามารถแก้ปัญหาได้</p>
-                        </div>
-                    </div>
-                    <div class="card rows">
-                        <div class="icon-bg">
-                            <i class="fa-brands fa-html5 fa-4x"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>HTML5</h3>
-                            <p>สามารถเข้าใจการออกแบบ layout ส่วนประกอบต่าง ๆ และสามารถเขียนได้ในระดับกลาง</p>
-                        </div>
-                    </div>
-                    <div class="card rows">
-                        <div class="icon-bg">
-                            <i class="fa-brands fa-css3 fa-4x"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>CSS</h3>
-                            <p>มีความเข้าใจ และสามารถตั้งค่า ปรับเปลี่ยน หรือแก้ปัญหาได้</p>
-                        </div>
-                    </div>
-                    <div class="card rows">
-                        <div class="icon-bg">
-                            <i class="fa-brands fa-js fa-4x"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>JavaScript</h3>
-                            <p>มีความเข้าใจในระดับหนึ่ง สามารถแก้ปัญหาบางอย่างได้</p>
-                        </div>
-                    </div>
-                    <div class="card rows">
-                        <div class="icon-bg">
-                            <i class="fa-brands fa-figma fa-4x"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Figma</h3>
-                            <p>สามารถออกแบบ และสร้างออกมาได้ สามารถแก้ปัญหาต่าง ๆ ได้</p>
-                        </div>
-                    </div>
-                    <div class="card rows">
-                        <div class="icon-bg">
-                            <i class="fa-brands fa-node-js fa-4x"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Node js</h3>
-                            <p>สามารถเขียนได้พอสมควร พอเข้าใจหลัก และสามารถแก้ปัญหาได้</p>
-                        </div>
-                    </div>
-                    <div class="card rows">
-                        <div class="icon-bg">
-                            <i class="fa-brands fa-php fa-4x"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>PHP</h3>
-                            <p>มีความเข้าใจในภาษาระดับหนึ่ง สามารถเขียน ปรับแต่งและแก้ปัญหาได้บางอย่างเท่านั้น</p>
-                        </div>
-                    </div>
-                    <div class="card rows">
-                        <div class="icon-bg">
-                            <i class="fa-brands fa-python fa-4x"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Python</h3>
-                            <p>มีแผนที่จะทำการศึกษาเพิ่มเติมในอนาคต ตอนนี้เพียงแค่สามารถเข้าใจและแก้ไขได้บางส่วนเท่านั้น</p>
-                        </div>
-                    </div>
-                </div> -->
+                <div class="card-container grid projects">
+                </div>
         </section>
     </main>
     <script src="script.min.js"></script>
