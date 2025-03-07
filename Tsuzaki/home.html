@@ -114,7 +114,7 @@
             }
 
             .text-highlight {
-                color: #2563eb;
+                color: var(--primary-color);
             }
         }
 
@@ -140,9 +140,6 @@
             grid-template-columns: repeat(2, 1fr);
             .card {
                 width: 100%;
-                /* h3 { */
-                    /* margin-top: 12px; */
-                /* } */
                 p {
                     font-size: 18px;
                 }
@@ -159,6 +156,93 @@
                 text-wrap: wrap;
             }
         }
+
+        .project-container {
+            display: flex;
+            align-items: center;
+            /* background-color: #2b2b2b46; */
+            /* border-radius: 10px; */
+            padding: 24px;
+            /* gap: 24px; */
+        }
+
+        .left-section {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .projects-img {
+            width: 100%;
+            border-radius: 10px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 50%;
+            &.dfv {
+                background-image: url('img/java-pjx.png');
+                height: 324px;
+            }
+        }
+
+        .right-section {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            color: var(--text-color);
+            h3 {
+                color: var(--primary-color);
+                font-size: 24px;
+                margin-bottom: 12px;
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.6;
+                transition: none;
+                .text-highlight {
+                    color: var(--primary-color);
+                }
+            }
+            .project-btn {
+                display: flex;
+                gap: 24px;
+                button {
+                    padding: 8px 16px;
+                    margin-top: 12px;
+                }
+            }
+        }
+
+/* ----------------------- Progress -----------------------*/
+
+        .progress {
+            background: rgba(138, 138, 138, 0.1);
+            /* background: #2563eb; */
+            justify-content: flex-start;
+            border-radius: 100px;
+            align-items: center;
+            position: relative;
+            padding: 0 5px;
+            display: flex;
+            height: 30px;
+        }
+
+        .progress-value {
+            animation: load 3s normal forwards;
+            box-shadow: 0 10px 40px -10px #fff;
+            border-radius: 100px;
+            background: #fff;
+            height: 20px;
+            width: 0;
+            }
+
+        @keyframes load {
+            0% { width: 0; }
+            100% { width: 68%; }
+        }
+
+/* ----------------------- Responsive -----------------------*/
 
         @media screen and (max-width: 1200px) {
 
@@ -267,7 +351,31 @@
                 padding: 8px 8px;
             }
 
+            .project-container {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* gap: 24px; */
+
+            .left-section, .right-section {
+                width: 100%;
+            }
+
+            .projects-img {
+                width: 50%;
+                height: 200px;
+            }
+
+            .right-section h3 {
+                text-align: center;
+            }
+            .project-btn {
+                justify-content: center;
+            }
+        
+
         }
+    }
 
         @media screen and (max-width: 480px) {
 
@@ -328,6 +436,14 @@
             .card-content h3 {
                 text-align: center;
             }
+
+            .left-section {
+                width: 100%;
+                .project-img {
+                    height: 256px;
+                }
+            }
+
         }
 
     </style>
@@ -482,9 +598,30 @@
                 </div>
 <!-- Project Me -->
                 <div id="project" class="title"><span class="highlight">Projects</span></div>
-                <p class="subtitle">Soon..</p>
-                <div class="card-container grid projects">
+                <p class="subtitle">ตัวอย่างผลงานของฉัน</p>
+                <div class="project-container">
+                    <div class="left-section">
+                        <div class="projects-img dfv"></div>
+                    </div>
+                    <div class="right-section">
+                        <div class="project-content">
+                            <h3>DisbledFrontView Mod (Java)</h3>
+                            <p>The DisableFrontView mod enhances gameplay immersion by disabling the front-facing third-person camera view (front perspective). When toggling the third-person perspective using the F5 key, this mod ensures you can only switch between the first-person view and the rear-facing third-person view.
+                                This mod is ideal for players who prefer a streamlined and consistent camera experience or find the front perspective distracting during gameplay.
+                            <span class="text-highlight">this mod is make for minecraft 1.8.9</span></p>
+                            <div class="project-btn">
+                                <button class="btn primary" onclick="window.open('https://modrinth.com/mod/disablefrontview', '_blank');">Modrinth</button>
+                                <button class="btn primary" onclick="window.open('https://github.com/Mifuyuu/DisableFrontView-1.8.9', '_blank');">GitHub<i class="fa-brands fa-github ico-white" style="font-size: 24px;"></i></button>
+                            </div>
+                            <!-- <div class="progress">
+                                <div class="progress-value"></div>
+                            </div> -->
+                        </div>
+                    </div>
                 </div>
+                <!-- <div class="progress">
+                    <div class="progress-value"></div>
+                  </div> -->
         </section>
     </main>
     <script src="script.min.js"></script>

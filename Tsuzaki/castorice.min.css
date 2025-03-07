@@ -48,16 +48,12 @@
 
 .dark-theme {
     --title-color: #fff;
-    --navbar-background-color: #131313;
-    --navbar-background-color: #1b1b1b;
-    --background-color: #181818;
-    --background-color: #28292b;
+    --navbar-background-color: #191d22;
+    --background-color: #16181c;
     --text-color: #fff;
-    --box-background-color: #242424;
+    --box-background-color: #191d22;
     --box-text-color: #fff;
-    /* --card-background-color: #16161675; */
-    /* --card-background-color: hsla(0, 0%, 5%, .7); */
-    --card-background-color: #202020;
+    --card-background-color: #191d22;
 }
 
 /* ----------------------- Global CSS -----------------------*/
