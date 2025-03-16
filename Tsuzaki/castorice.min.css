@@ -3,10 +3,6 @@
 
 :root {
     --primary-color: #2563eb;
-    --secondary-color: #4c00ff;
-    --tertiary-color: #97f7f7;
-    --quaternary-color: #4e26ab;
-    --quinary-color: #09f;
     --white: #fff;
     --black: #202020;
     --transition: all 0.3s ease-in-out;
@@ -14,18 +10,20 @@
     --box-shadow: 0 6px 16px -2px rgba(54, 85, 178, 0.35);
     /* --box-shadow: 0 6px 16px -2px rgba(0, 64, 255, 0.356); */
     --card-shadow: 0 6px 16px -2px rgba(54, 85, 178, .12);
+    --btn-border-radius: 7px;
 }
 
 /* ----------------------- Light Theme -----------------------*/
 
 .light-theme {
-    --title-color: #202020;
+    --title-color: #2c2c2c;
     --navbar-background-color: #fff;
     --background-color: #fafafa;
-    --text-color: #202020;
+    --text-color: #2c2c2c;
     --box-background-color: #fff;
-    --box-text-color: #202020;
-    --card-background-color: #ffffff75;
+    --box-text-color: #2c2c2c;
+    /* --card-background-color: #ffffff75; */
+    --card-background-color: hsla(0,0%,100%,.5);
 
 }
 
@@ -38,10 +36,23 @@
     --text-color: #fff;
     --box-background-color: #242424;
     --box-text-color: #fff;
-    --card-background-color: #16161675;
+    /* --card-background-color: #16161675; */
+    --card-background-color: hsla(0, 0%, 5%, 0.5);;
 }
 
-/* ----------------------- Global Styles -----------------------*/
+/* ----------------------- Dark Theme New -----------------------*/
+
+.dark-theme {
+    --title-color: #fff;
+    --navbar-background-color: #191d22;
+    --background-color: #16181c;
+    --text-color: #fff;
+    --box-background-color: #191d22;
+    --box-text-color: #fff;
+    --card-background-color: #191d22;
+}
+
+/* ----------------------- Global CSS -----------------------*/
 
 * {
     padding: 0;
@@ -138,7 +149,7 @@
     color: white;
     padding: 8px 16px;
     border: none;
-    border-radius: 10px;
+    border-radius: var(--btn-border-radius);
     cursor: pointer;
 }
 
@@ -333,7 +344,7 @@ body {
     color: var(--white);
     padding: 8px 16px;
     border: none;
-    border-radius: 10px;
+    border-radius: var(--btn-border-radius);
     cursor: pointer;
     transition: var(--transition);
     box-shadow: var(--box-shadow);
